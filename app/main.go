@@ -1,11 +1,10 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/makkesann/test2/app/module"
+	"github.com/makkesann/test2/app/routes"
 )
 
 func main() {
-	fmt.Println(module.Goodbye())
+	r := routes.GetRouter()
+	r.Run(":8080")
 }
